@@ -29,10 +29,20 @@ namespace StateMachineExample.StateMachineSystem
         {
             currentState?.Exit();
 
-            preStats.Push(currentState);
+            if(currentState != null) preStats.Push(currentState);
             currentState = state;
 
             currentState?.Enter();
+        }
+
+        public void ClearPre()
+        {
+            if(preStats.Count > 0)
+            {
+                IState state = preStats.Pop();
+                preStats.Clear();
+                preStats.Push(state);
+            }
         }
 
         public void BackState()

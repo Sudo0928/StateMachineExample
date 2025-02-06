@@ -14,16 +14,18 @@ namespace StateMachineExample.StateMachineSystem
 
         public override void Enter()
         {
-
+            stateMachine.ClearPre();
         }
 
         public override void Exit()
         {
-            Console.Clear();
+            
         }
 
         public override void Update()
         {
+            base.Update();
+
             Console.WriteLine("Dungeon");
 
             string str = Console.ReadLine();

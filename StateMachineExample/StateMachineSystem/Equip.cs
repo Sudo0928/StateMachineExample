@@ -19,11 +19,13 @@ namespace StateMachineExample.StateMachineSystem
 
         public override void Exit()
         {
-            Console.Clear();
+
         }
 
         public override void Update()
         {
+            base.Update();
+
             Console.WriteLine("Equip");
 
             string str = Console.ReadLine();

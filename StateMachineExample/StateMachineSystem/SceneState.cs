@@ -28,7 +28,7 @@ namespace StateMachineExample.StateMachineSystem
 
         public virtual void Update()
         {
-
+            Console.Clear();
         }
     }
 }
