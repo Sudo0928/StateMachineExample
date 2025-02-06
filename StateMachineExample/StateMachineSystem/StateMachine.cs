@@ -9,8 +9,8 @@ namespace StateMachineExample.StateMachineSystem
 {
     internal class StateMachine
     {
-        public IState currentState;
-        public Stack<IState> preStats = new Stack<IState>();
+        private IState currentState;
+        private Stack<IState> preStats = new Stack<IState>();
 
         public Village Village { get; }
         public Dungeon Dungeon { get; }
